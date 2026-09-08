@@ -6,7 +6,7 @@ The model receives an input sequence of Boolean variables together with a fixed 
 
 ## What I did
 
-- Reconstructed the central results of the repository in a self-contained [18-page write-up](writeup/rs-takehome-meiring.pdf).
+- Reconstructed the central results of the repository in a self-contained [18-page write-up](https://github.com/ben-meiring/transformer-symmetries/blob/main/transformer_symmetries_writeup.pdf).
 - Derived the scalar normal form of an attention head and showed that threshold degree gives the general lower bound $\deg_{\pm}(f) \leq H^*(f)$.
 - Used this framework to recover the exact head complexity of parity: $H^*(\mathrm{PARITY}_n)=n$.
 - Developed a symmetry-based method for analyzing whole classes of Boolean functions using group orbits and Reynolds-averaged Walsh characters.
