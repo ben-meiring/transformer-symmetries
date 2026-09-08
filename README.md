@@ -22,11 +22,11 @@ The 16 possible inputs collapse into six rotation orbits: $O_0$, $O_1$, $O_{\mat
 
 Define $F=+1$ when at least one adjacent pair is positive, and $F=-1$ otherwise. The degree-one invariant $I_1(z)=\frac{1}{4}\sum_{i=1}^4 z_i$ distinguishes the orbits by Hamming weight. However, $O_{\mathrm{adj}}$ and $O_{\mathrm{opp}}$ both map to $I_1=0$ despite having opposite labels, so no degree-one invariant can separate the classes.
 
-![The six orbits projected onto the degree-one invariant](assets/c4-degree-one-orbit-projection.png)
+![The six orbits projected onto the degree-one invariant](pictures/c4-degree-one-orbit-projection.png)
 
 Adding the degree-two invariant $I_{\mathrm{opp}}(z)=\frac{1}{2}(z_1z_3+z_2z_4)$ resolves this collision. In the two-dimensional invariant space, the line $P_F(z)=I_1(z)-\frac{1}{2}I_{\mathrm{opp}}(z)=0$ separates the positive and negative orbits.
 
-![The six orbits separated using degree-one and degree-two invariants](assets/c4-i1-iopp-orbit-separation.png)
+![The six orbits separated using degree-one and degree-two invariants](pictures/c4-i1-iopp-orbit-separation.png)
 
 Therefore $F$ has threshold degree two, giving the head-complexity lower bound $H^*(F)\geq2$. More generally, Reynolds averaging shows that any sign-representing polynomial for a symmetric function can be replaced by an invariant one without increasing its degree.
 
