@@ -1,12 +1,12 @@
 # Symmetries in Transformers Computing Boolean Functions
 
-This project studies the computational capacity of a single layers transformers, and relates this to the number of attention heads required to represent boolean functions. We aimed to verify and extend the results of an autoresearch repository provided by [Verified Mechanisms](https://verifiedmechanisms.ai/).
+This project studies the computational capacity of single-layer transformers and relates this to the number of attention heads required to represent Boolean functions. We aimed to verify and extend the results of an autoresearch repository provided by [Verified Mechanisms](https://verifiedmechanisms.ai/); its roughly 200 results and their dependencies can be explored through the interactive [Theorem Atlas](https://ben-meiring.github.io/rs-takehome/).
 
 The model receives an input sequence of Boolean variables together with a fixed query token. Only the residual stream at the query token is read by the classifier. For a Boolean function $f$, its **head complexity** $H^*(f)$ is the minimum number of attention heads required to compute it.
 
 ## What I did
 
-- Reconstructed the central results of the repository in a self-contained [18-page write-up](https://github.com/ben-meiring/transformer-symmetries/blob/main/transformer_symmetries_writeup.pdf).
+- Reconstructed the central results of the repository in a self-contained [18-page write-up](transformer_symmetries_writeup.pdf).
 - Developed a symmetry-based method for analyzing whole classes of Boolean functions using group orbits and Reynolds-averaged Walsh characters.
 - Reduced the search for the lowest-degree invariant separator to a linear-programming feasibility problem.
 - Produced Lean-verified proofs of two symmetry-based lower bounds.
@@ -14,7 +14,7 @@ The model receives an input sequence of Boolean variables together with a fixed 
 
 ## A quick example: cyclic symmetry
 
-For a Boolean function $f$, let $H^*(f)$ denote the minimum number of attention heads required to compute it, and let $\deg_{\pm}(f)$ denote the minimum degree of a polynomial whose sign reproduces $f$. These quantities satisfy
+For a Boolean function $f$, let $\deg_{\pm}(f)$ denote the minimum degree of a polynomial whose sign reproduces $f$. Threshold degree bounds head complexity:
 
 $$
 \deg_{\pm}(f)\leq H^*(f),
@@ -69,7 +69,8 @@ $$
 
 separates the positive and negative orbits.
 
- <br>
+<br>
+
 <table>
   <tr>
     <td width="50%" align="center">
@@ -89,13 +90,14 @@ separates the positive and negative orbits.
     </td>
   </tr>
 </table>
+
 <br>
 
 Therefore $F$ has threshold degree two, giving the head-complexity lower bound $H^*(F)\geq2$. More generally, Reynolds averaging shows that any sign-representing polynomial for a symmetric function can be replaced by an invariant one without increasing its degree.
 
 ## Read and explore
 
-- **[Read the full write-up](writeup/rs-takehome-meiring.pdf)**
+- **[Read the full write-up](transformer_symmetries_writeup.pdf)**
 - **[Open the interactive Theorem Atlas](https://ben-meiring.github.io/rs-takehome/)**
 - **[Browse my fork of the original repository](https://github.com/ben-meiring/rs-takehome)**
 - **[View the original Verified Mechanisms repository](https://github.com/VerifiedMechanisms/rs-takehome)**
@@ -105,10 +107,8 @@ Therefore $F$ has threshold degree two, giving the head-complexity lower bound $
 ```text
 .
 ├── README.md
-├── assets/
+├── pictures/
 │   ├── c4-degree-one-orbit-projection.png
 │   └── c4-i1-iopp-orbit-separation.png
-├── writeup/
-│   └── rs-takehome-meiring.pdf
-└── assignment-source/
+└── transformer_symmetries_writeup.pdf
 ```
