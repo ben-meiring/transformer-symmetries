@@ -20,13 +20,27 @@ Consider four sign-valued inputs $z_i\in\{-1,1\}$ arranged on a cycle, with cycl
 
 The 16 possible inputs collapse into six rotation orbits: $O_0$, $O_1$, $O_{\mathrm{adj}}$, $O_{\mathrm{opp}}$, $O_3$, and $O_4$. Here $O_{\mathrm{adj}}$ contains configurations whose two positive entries are adjacent, while $O_{\mathrm{opp}}$ contains those whose positive entries are opposite.
 
-Define $F=+1$ when at least one adjacent pair is positive, and $F=-1$ otherwise. The degree-one invariant $I_1(z)=\frac{1}{4}\sum_{i=1}^4 z_i$ distinguishes the orbits by Hamming weight. However, $O_{\mathrm{adj}}$ and $O_{\mathrm{opp}}$ both map to $I_1=0$ despite having opposite labels, so no degree-one invariant can separate the classes.
+Define $F=+1$ when at least one adjacent pair is positive, and $F=-1$ otherwise. The degree-one invariant $I_1(z)=\frac{1}{4}\sum_{i=1}^4 z_i$ distinguishes the orbits by Hamming weight. However, $O_{\mathrm{adj}}$ and $O_{\mathrm{opp}}$ both map to $I_1=0$ despite having opposite labels, so no degree-one invariant can separate the classes. Adding the degree-two invariant $I_{\mathrm{opp}}(z)=\frac{1}{2}(z_1z_3+z_2z_4)$ resolves this collision. In the two-dimensional invariant space, the line $P_F(z)=I_1(z)-\frac{1}{2}I_{\mathrm{opp}}(z)=0$ separates the positive and negative orbits.
 
-![The six orbits projected onto the degree-one invariant](pictures/c4-degree-one-orbit-projection.png)
-
-Adding the degree-two invariant $I_{\mathrm{opp}}(z)=\frac{1}{2}(z_1z_3+z_2z_4)$ resolves this collision. In the two-dimensional invariant space, the line $P_F(z)=I_1(z)-\frac{1}{2}I_{\mathrm{opp}}(z)=0$ separates the positive and negative orbits.
-
-![The six orbits separated using degree-one and degree-two invariants](pictures/c4-i1-iopp-orbit-separation.png)
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="pictures/c4-degree-one-orbit-projection.png"
+           alt="Degree-one orbit projection"
+           width="100%">
+      <br>
+      <em>(a) Projection onto the degree-one invariant. The oppositely labelled orbits
+      O<sub>adj</sub> and O<sub>opp</sub> coincide.</em>
+    </td>
+    <td width="50%" align="center">
+      <img src="pictures/c4-i1-iopp-orbit-separation.png"
+           alt="Degree-two orbit separation"
+           width="100%">
+      <br>
+      <em>(b) Adding the degree-two invariant separates the positive and negative orbits.</em>
+    </td>
+  </tr>
+</table>
 
 Therefore $F$ has threshold degree two, giving the head-complexity lower bound $H^*(F)\geq2$. More generally, Reynolds averaging shows that any sign-representing polynomial for a symmetric function can be replaced by an invariant one without increasing its degree.
 
